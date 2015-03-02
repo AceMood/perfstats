@@ -36,7 +36,7 @@
 
 (function(g,d,D,a,k,p,b,i){
   k=function(){return D.now?D.now():(+new D)};
-  g.pf=p={s:_t_?_t_:k(),r:0,c:0,o:0};
+  g.pf=p={s:k(),r:0,c:0,o:0};
   g._t_=function(c){p[c]=k()-p.s;};
   // helper function bind event
   b=function(o,e,h){
