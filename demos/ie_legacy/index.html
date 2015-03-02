@@ -10,7 +10,6 @@
             }
         });
 
-
         (function(g,d,D,a,k,p,b,i){
             k=function(){return D.now?D.now():(+new D)};
             g.pf=p={s:k(),r:0,c:0,o:0};
@@ -30,6 +29,7 @@
             // record doc.readystatechange time point
             b(d,'readystatechange',function(){if(d.readyState=='complete'){p.c=k()-p.s}})
         })(window,document,Date,'//ping.zhushou.sogou.com/pf.gif');
+
     </script>
     <title>critical resource path test</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,6 +45,7 @@
 </ul>
 <p>Hello <span></span> students!</p>
 <script type="text/javascript">
+    _t_('r');
     (function(d) {
         var s = d.createElement("script");
         s.src = "blockjs.php";
@@ -53,9 +54,9 @@
         d.body.appendChild(s);
     })(document);
 </script>
-<!--<script type="text/javascript" src="blockjs.php" defer="defer"></script>-->
+<!--<script type="text/javascript" src="blockjs.php" defer="defer"></script>
 <script type="text/javascript">
     _t_('r');
-</script>
+</script>-->
 </body>
 </html>
