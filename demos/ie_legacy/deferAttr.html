@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+        var startTime = Date.now ? Date.now() : (+new Date());
+        document.addEventListener('DOMContentLoaded', function() {
+            dcl = Date.now?Date.now():(+new Date);
+            while (Date.now() - dcl < 2000) {
+
+            }
+        });
+
+        (function(g,d,D,a,k,p,b,i){
+            k=function(){return D.now?D.now():(+new D)};
+            g.pf=p={s:k(),r:0,c:0,o:0};
+            g._t_=function(c){p[c]=k()-p.s;};
+            // helper function bind event
+            b=function(o,e,h){
+                if(o.addEventListener){o.addEventListener(e,h,0)}
+                else if(o.attachEvent){o.attachEvent('on'+e,h)}
+                else{o['on'+e]=h}
+            };
+            // record window.onload time point
+            b(g,'load',function(){
+                p.o=k()-p.s;
+                i=new Image();
+                i.src=a+['?s='+p.s,'r='+p.r,'c='+p.c,'o='+p.o].join('&')
+            });
+            // record doc.readystatechange time point
+            b(d,'readystatechange',function(){if(d.readyState=='complete'){p.c=k()-p.s}})
+        })(window,document,Date,'//ping.zhushou.sogou.com/pf.gif');
+
+    </script>
+    <title>critical resource path test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="blockcss.php" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<p>Hello <span></span> students!</p>
+<script type="text/javascript" src="blockjs.php" defer="defer"></script>
+<script type="text/javascript">
+    _t_('r');
+</script>
+</body>
+</html>
