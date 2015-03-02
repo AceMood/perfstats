@@ -31,7 +31,7 @@
 
 /**
  * Usage:
- * see "../demos/ie_legacy.html"
+ * see "../demos/ie_legacy/"
  */
 
 (function(g,d,D,a,k,p,b,i){

@@ -1,0 +1,19 @@
+ul {
+    font-size: 30px;
+    color: red;
+}
+li {}
+p {
+    line-height: 200%;
+    color: green;
+}
+
+table {
+    display: block;
+    width: 600px;
+    border-collapse: collapse;
+}
+
+table td {
+    border: solid #222 1px;
+}
